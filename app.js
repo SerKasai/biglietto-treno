@@ -49,12 +49,12 @@ if (isNaN(userKm) || isNaN(userAge)) {
 }
 
 tdKm.innerHTML = `${userKm} km`;
-tdPrezzo.innerHTML = `${TicketPrice} &euro;`;
-tdSconto.innerHTML = `${Sconto} &euro;`;
+tdPrezzo.innerHTML = `${TicketPrice.toFixed(2)} &euro;`;
+tdSconto.innerHTML = `${Sconto.toFixed(2)} &euro;`;
 if (userAge < '18') {
-  tdTotale.innerHTML = `${PrezzoFinaleGiovani} &euro;`;
+  tdTotale.innerHTML = `${PrezzoFinaleGiovani.toFixed(2)} &euro;`;
 } else if (userAge >= '65') {
-  tdTotale.innerHTML = `${PrezzoFinaleAnziani} &euro;`;
+  tdTotale.innerHTML = `${PrezzoFinaleAnziani.toFixed(2)} &euro;`;
 } else {
-  tdTotale.innerHTML = `${TicketPrice} &euro;`;
+  tdTotale.innerHTML = `${TicketPrice.toFixed(2)} &euro;`;
 }
